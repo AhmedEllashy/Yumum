@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="OnboardingCollectionViewCell" customModule="Yumum" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="282" height="388"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="282" height="388"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nqf-Vc-6Z3">
+                        <rect key="frame" x="0.0" y="0.0" width="282" height="388"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding-one" translatesAutoresizingMaskIntoConstraints="NO" id="N4r-1g-5W5">
+                                <rect key="frame" x="21" y="31" width="240" height="170"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae tincidunt semper" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSD-U8-PyL">
+                                <rect key="frame" x="30" y="254" width="222" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.36078431370000003" green="0.3803921569" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Food Around You" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jE7-ED-DAk">
+                                <rect key="frame" x="0.33333333333334281" y="212.66666666666666" width="281.66666666666663" height="31.333333333333343"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jE7-ED-DAk" firstAttribute="centerX" secondItem="Nqf-Vc-6Z3" secondAttribute="centerX" id="4RC-4v-LWn"/>
+                            <constraint firstItem="DSD-U8-PyL" firstAttribute="leading" secondItem="Nqf-Vc-6Z3" secondAttribute="leading" constant="30" id="IfF-WB-0xf"/>
+                            <constraint firstItem="DSD-U8-PyL" firstAttribute="centerX" secondItem="Nqf-Vc-6Z3" secondAttribute="centerX" id="Qe1-nl-CdT"/>
+                            <constraint firstAttribute="bottom" secondItem="DSD-U8-PyL" secondAttribute="bottom" constant="80" id="Taz-kC-6kE"/>
+                            <constraint firstAttribute="trailing" secondItem="DSD-U8-PyL" secondAttribute="trailing" constant="30" id="XbD-2C-c4w"/>
+                            <constraint firstItem="DSD-U8-PyL" firstAttribute="top" secondItem="jE7-ED-DAk" secondAttribute="bottom" constant="10" id="dBd-gk-FYP"/>
+                            <constraint firstItem="N4r-1g-5W5" firstAttribute="width" secondItem="Nqf-Vc-6Z3" secondAttribute="width" multiplier="0.851064" id="eqj-Wx-x2h"/>
+                            <constraint firstItem="N4r-1g-5W5" firstAttribute="top" secondItem="Nqf-Vc-6Z3" secondAttribute="top" constant="31" id="ovc-sV-dd7"/>
+                            <constraint firstItem="N4r-1g-5W5" firstAttribute="height" secondItem="Nqf-Vc-6Z3" secondAttribute="height" multiplier="0.438144" id="piw-K0-pcw"/>
+                            <constraint firstAttribute="trailing" secondItem="N4r-1g-5W5" secondAttribute="trailing" constant="21" id="rEF-Zr-48F"/>
+                            <constraint firstItem="N4r-1g-5W5" firstAttribute="leading" secondItem="Nqf-Vc-6Z3" secondAttribute="leading" constant="21" id="zcE-zT-oE6"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Nqf-Vc-6Z3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="PrX-Yc-ciU"/>
+                <constraint firstAttribute="bottom" secondItem="Nqf-Vc-6Z3" secondAttribute="bottom" id="XQx-t1-DlW"/>
+                <constraint firstItem="Nqf-Vc-6Z3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Y25-IN-blf"/>
+                <constraint firstAttribute="trailing" secondItem="Nqf-Vc-6Z3" secondAttribute="trailing" id="qhr-T2-Jsx"/>
+            </constraints>
+            <size key="customSize" width="282" height="388"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="DSD-U8-PyL" id="Kow-BB-UCE"/>
+                <outlet property="onBoardingImageView" destination="N4r-1g-5W5" id="KvB-kD-3Hc"/>
+                <outlet property="titleLabel" destination="jE7-ED-DAk" id="ruS-AM-ybn"/>
+            </connections>
+            <point key="canvasLocation" x="222.90076335877862" y="22.535211267605636"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="onboarding-one" width="432" height="338"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

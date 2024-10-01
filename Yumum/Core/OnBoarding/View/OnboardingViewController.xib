@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnboardingViewController" customModule="Yumum" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="K9k-UJ-Chb" id="ofX-8I-gDp"/>
+                <outlet property="loginButton" destination="1Pp-sv-3xj" id="18y-vq-Hgf"/>
+                <outlet property="nextButton" destination="sO1-Ks-Vyc" id="EsF-vG-Gl9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="K9k-UJ-Chb">
+                    <rect key="frame" x="0.0" y="59" width="393" height="502"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zwi-Es-HN1">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="S7X-UR-4B9">
+                    <rect key="frame" x="20" y="581" width="353" height="122.33333333333337"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sO1-Ks-Vyc">
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="51.333333333333336"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Next">
+                                <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="baseBackgroundColor" name="Orange"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="nextButtonPressed:" destination="-1" eventType="touchUpInside" id="jia-3h-X2F"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Pp-sv-3xj">
+                            <rect key="frame" x="0.0" y="71.333333333333371" width="353" height="51"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Login" cornerStyle="dynamic">
+                                <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="baseForegroundColor" name="Orange"/>
+                                <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                        </button>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By using our mobile app, you agree to our Terms of Use and Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwa-oJ-Vsj">
+                    <rect key="frame" x="20" y="733.33333333333337" width="353" height="37.666666666666629"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                    <color key="textColor" red="0.36078431372549019" green="0.38039215686274508" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="S7X-UR-4B9" secondAttribute="trailing" constant="20" id="0up-4P-Jie"/>
+                <constraint firstItem="S7X-UR-4B9" firstAttribute="top" secondItem="K9k-UJ-Chb" secondAttribute="bottom" constant="20" id="1Le-ms-edZ"/>
+                <constraint firstItem="xwa-oJ-Vsj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Ck1-aC-gqX"/>
+                <constraint firstItem="S7X-UR-4B9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="ONY-ne-yEa"/>
+                <constraint firstItem="K9k-UJ-Chb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QdP-uT-tXv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xwa-oJ-Vsj" secondAttribute="bottom" constant="47" id="YsJ-Pi-UgF"/>
+                <constraint firstItem="K9k-UJ-Chb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="bsE-xb-kMP"/>
+                <constraint firstItem="sO1-Ks-Vyc" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.06" id="rX5-3f-WRs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="K9k-UJ-Chb" secondAttribute="trailing" id="vYU-uc-kkU"/>
+                <constraint firstItem="xwa-oJ-Vsj" firstAttribute="top" secondItem="S7X-UR-4B9" secondAttribute="bottom" constant="30" id="wS1-w4-Wwe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xwa-oJ-Vsj" secondAttribute="trailing" constant="20" id="zEp-hY-9Tk"/>
+            </constraints>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Orange">
+            <color red="0.94901960784313721" green="0.38823529411764707" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
