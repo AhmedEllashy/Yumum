@@ -20,6 +20,14 @@ extension UIView{
             layer.mask = shape
         }
     func addCornerRadius(){
+        self.layer.masksToBounds = true
         self.layer.cornerRadius = 10.0
+    }
+    func addShadow(){
+        self.layer.masksToBounds = false
+        self.layer.shadowOffset = CGSize(width: 0, height: 0)
+        self.layer.shadowColor = UIColor.white.cgColor
+        self.layer.shadowOpacity = 1
+        self.layer.shadowRadius = 2
     }
 }
