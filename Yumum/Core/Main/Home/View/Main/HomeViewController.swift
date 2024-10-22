@@ -25,8 +25,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-
     }
+    
     //MARK: - Helpers
     fileprivate func setup(){
         configUIViews()
@@ -50,13 +50,14 @@ class HomeViewController: UIViewController {
  
         collectionView.register(HeaderSectionCollectionReusableView.nib(), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderSectionCollectionReusableView.identifier)
     }
+    
     private func configUIViews(){
         collectionView.frame = view.bounds
     }
 
 
 }
-//MARK: - UICollectionViewDataSource
+//MARK: - UICollectionViewDataSource Methods
 extension HomeViewController: UICollectionViewDataSource{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -104,9 +105,8 @@ extension HomeViewController: UICollectionViewDataSource{
         }
     
     }
-    
-    
 }
+//MARK: - UICollectionViewDelegate Methods
 extension HomeViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HeaderSectionCollectionReusableView.identifier, for: indexPath) as? HeaderSectionCollectionReusableView else{
@@ -129,7 +129,7 @@ extension HomeViewController: UICollectionViewDelegate{
         return header
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        var sectionType = sectionTypes[indexPath.section]
+        let sectionType = sectionTypes[indexPath.section]
         switch sectionType{
         case .topSection :
             break
