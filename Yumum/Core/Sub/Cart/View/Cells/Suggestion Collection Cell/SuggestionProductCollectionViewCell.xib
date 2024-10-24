@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SuggestionProductCollectionViewCell" customModule="Yumum" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="376" height="111"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="376" height="111"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image 4" translatesAutoresizingMaskIntoConstraints="NO" id="3h2-md-JqO">
+                        <rect key="frame" x="0.0" y="0.0" width="112.66666666666667" height="111"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chicken Curry Noodle with Beans" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OV-FS-2oj">
+                        <rect key="frame" x="117.66666666666667" y="6" width="238.33333333333331" height="40.666666666666664"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="fVK-6E-bZx">
+                        <rect key="frame" x="117.66666666666667" y="79" width="253.33333333333331" height="32"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUY-s9-nsD">
+                                <rect key="frame" x="0.0" y="0.0" width="31.333333333333332" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="31.329999999999998" id="zKA-Lg-Fzh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibv-do-dll">
+                                <rect key="frame" x="186.33333333333331" y="0.0" width="67" height="32"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+ Add">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addToCartButtonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="jch-8p-OKc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ibv-do-dll" secondAttribute="trailing" id="4p8-IV-pdX"/>
+                            <constraint firstAttribute="bottom" secondItem="ibv-do-dll" secondAttribute="bottom" id="PuT-a5-VBy"/>
+                            <constraint firstItem="ibv-do-dll" firstAttribute="top" secondItem="fVK-6E-bZx" secondAttribute="top" id="fxM-Ez-Ie8"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="fVK-6E-bZx" secondAttribute="bottom" id="074-mi-Pwh"/>
+                <constraint firstAttribute="trailing" secondItem="1OV-FS-2oj" secondAttribute="trailing" constant="20" id="9PL-O7-CJC"/>
+                <constraint firstItem="fVK-6E-bZx" firstAttribute="leading" secondItem="3h2-md-JqO" secondAttribute="trailing" constant="5" id="HuP-mA-1QQ"/>
+                <constraint firstItem="3h2-md-JqO" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.3" id="J9Z-3Z-4j6"/>
+                <constraint firstAttribute="trailing" secondItem="fVK-6E-bZx" secondAttribute="trailing" constant="5" id="XmK-Bd-gYE"/>
+                <constraint firstItem="3h2-md-JqO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="cJn-ni-7Yf"/>
+                <constraint firstItem="3h2-md-JqO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="llb-Wz-jFD"/>
+                <constraint firstAttribute="bottom" secondItem="3h2-md-JqO" secondAttribute="bottom" id="orp-4X-sVI"/>
+                <constraint firstItem="1OV-FS-2oj" firstAttribute="leading" secondItem="3h2-md-JqO" secondAttribute="trailing" constant="5" id="vhG-vg-u2G"/>
+                <constraint firstItem="1OV-FS-2oj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="6" id="y5j-Ry-iPV"/>
+            </constraints>
+            <size key="customSize" width="376" height="111"/>
+            <connections>
+                <outlet property="priceLabel" destination="iUY-s9-nsD" id="i7Q-cq-1zg"/>
+                <outlet property="productImageView" destination="3h2-md-JqO" id="lrX-u6-0An"/>
+                <outlet property="productLabelName" destination="1OV-FS-2oj" id="syU-oL-Me8"/>
+            </connections>
+            <point key="canvasLocation" x="300.76335877862596" y="8.8028169014084519"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Image 4" width="120" height="120"/>
+        <namedColor name="AccentColor">
+            <color red="0.94901960784313721" green="0.38823529411764707" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

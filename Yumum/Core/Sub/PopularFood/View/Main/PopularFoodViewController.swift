@@ -9,6 +9,7 @@ import UIKit
 
 class PopularFoodViewController: UIViewController {
 //MARK: - UIViews
+    var cartButtonView: UIView = CartButtonView()
     var productsCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -16,6 +17,7 @@ class PopularFoodViewController: UIViewController {
         collectionView.backgroundColor = .background
         return collectionView
     }()
+   
 //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,16 +26,26 @@ class PopularFoodViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         productsCollectionView.frame = view.bounds
+        print(view.height)
+        cartButtonView.frame = CGRect(x:30, y: view.bottom - 150, width:view.width - 60, height: 55)
     }
 //MARK: - Helpers
     private func setup(){
         view.addSubview(productsCollectionView)
+        view.addSubview(cartButtonView)
         productsCollectionView.delegate = self
         productsCollectionView.dataSource = self
         title = "Popular Food"
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Search"), style: .plain, target: self, action: #selector(didTapSearchButton))
+        view.bringSubviewToFront(cartButtonView)
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(didTapCartButtonView(_:)))
+        cartButtonView.addGestureRecognizer(gesture)
     }
     
+    @objc private func didTapCartButtonView(_ sender: Any){
+        let vc = CartViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     @objc private func didTapSearchButton(){
         
     }

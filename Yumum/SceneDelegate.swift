@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        navController = UINavigationController(rootViewController: CartViewController())
+        navController = UINavigationController(rootViewController: MockViewController())
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
         
