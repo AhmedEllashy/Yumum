@@ -19,9 +19,9 @@ extension UIView{
             shape.path = maskPath.cgPath
             layer.mask = shape
         }
-    func addCornerRadius(){
+    func addCornerRadius(_ radius: Double? = nil){
         self.layer.masksToBounds = true
-        self.layer.cornerRadius = 10.0
+        self.layer.cornerRadius = radius ?? 10.0
     }
     func addShadow(){
         self.layer.masksToBounds = false

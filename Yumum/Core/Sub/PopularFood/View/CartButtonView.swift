@@ -18,13 +18,16 @@ class CartButtonView: UIView {
     
     var itemsCountLabel: UILabel = {
         let label = UILabel()
-        label.text = "0"
+        label.text = "0 items in Cart"
+        label.textColor = .white
+        label.font = .systemFont(ofSize: 15, weight: .bold)
         return label
     }()
     
     var totalPriceBackgroundView: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemGray6
+        var color: UIColor = .systemGray6.withAlphaComponent(0.3)
+        view.backgroundColor = color
         view.addCornerRadius()
         return view
     }()
@@ -56,10 +59,11 @@ class CartButtonView: UIView {
     
     //MARK: - Helpers
     fileprivate func configUIViews(){
-        cartImageView.frame = CGRect(x: 5, y: 0, width: 30, height: 30)
-        itemsCountLabel.frame = CGRect(x: cartImageView.right + 5, y: 0, width: 100, height: 30)
-        totalPriceBackgroundView.frame = CGRect(x: self.right - 30 , y: 0, width: 50, height: 50)
-        totalPriceLabel.frame = CGRect(x: totalPriceBackgroundView.bounds.midX , y: totalPriceBackgroundView.bounds.midY, width: 30, height: 30)
+        cartImageView.frame = CGRect(x: 10, y: 15, width: 25, height: 25)
+        itemsCountLabel.frame = CGRect(x: cartImageView.right + 10, y: 15, width: 180, height: 30)
+        totalPriceBackgroundView.frame = CGRect(x: self.right - 90 , y: 8, width: 50, height: 40)
+        totalPriceLabel.frame = CGRect(x: 10 , y: 10, width: 40, height: 20)
+//        totalPriceLabel.center = totalPriceBackgroundView.center
     }
     
 }
